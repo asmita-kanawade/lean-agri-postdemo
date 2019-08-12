@@ -1,0 +1,23 @@
+<div class="postBlock" *ngFor="let post of postArray">
+        <div>
+                <div id="postTitle" class="displayPostContainer" >
+                        {{post.title}}
+                </div>
+                <div class="postImg" >
+                        <img class="postImg-al" src="../../assets/images/post1.jpeg">
+                        <!--                         -->
+                </div>
+                <div id="postBody" class="displayPostContainer" >
+                        {{post.body}}
+                </div>
+        </div>
+        
+        <div class="responses" (click)="updatePost(post)">
+               Update Post
+        </div>
+
+        <div class="responses" (click)="navToResponses(post)"> 
+                See responses 
+        </div>
+
+</div>

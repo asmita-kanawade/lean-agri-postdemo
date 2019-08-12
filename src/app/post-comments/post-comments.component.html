@@ -1,0 +1,35 @@
+<div class="postBlock">
+    <span class="span">Showing responses for:</span>
+    <div class="postTitle" (click)="navToPost()">
+        {{title}}
+    </div>
+
+    <hr />
+    <span class="span">Responses:</span>
+
+</div>
+
+<div class="postBlock" *ngFor="let comment of commentsArray">
+        <div class="postContainer">
+            <div class="comment-header">
+                <img class="postLogo" src="../../assets/images/logo.png">                    
+                <div class="author">
+                        <div class="user">
+                                {{comment.name}}
+                        </div>
+                        <div class="email">
+                                {{comment.email}}        
+                        </div>
+                </div>
+            </div>    
+
+            <div class="comment">
+                    {{comment.body}}
+            </div>
+            <div class="email">
+                    Post Id: {{comment.postId}}
+                   Commet Id: {{comment.id}}        
+            </div>
+        </div>
+    </div>
+    

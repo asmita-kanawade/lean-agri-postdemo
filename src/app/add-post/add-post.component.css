@@ -1,0 +1,19 @@
+.postBlock{
+    position: relative;
+    width: 100%;
+    background-color: silver
+}
+.formLabels{
+    font-size: 20px;
+    color: white;
+}
+.form-control.editPost{
+    height: 200px;
+}
+.errorBox{
+    border: 1px solid brown;
+    background-color: rgb(241, 214, 219);
+}
+.cancelBtn{
+    margin-left: 10px;
+}

@@ -1,0 +1,34 @@
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+        <input class="nav-link active search" ngModel name="input" type="text" placeholder="search by title/content"
+            #searchString="ngModel" (change)="searchPosts(searchString.value)" />
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" (click)="searchPosts(searchString.value)">Search</button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" routerLink="/addPost">Add Post</button>
+    </li>
+</ul>
+
+
+    <div class="postBlock" *ngFor="let post of postArray;odd as isOdd" (click)="onClick(post)">
+        <div class="postContainer">
+            <img *ngIf="isOdd" class="postImage" src="../../assets/images/post3.jpeg">
+            <img *ngIf="!isOdd" class="postImage" src="../../assets/images/post2.jpg">
+            <!-- <img *ngIf="index==2" class="postImage" src="../../assets/images/post3.jpeg">
+            <img *ngIf="index==3" class="postImage" src="../../assets/images/post4.png">
+            <img *ngIf="index==4" class="postImage" src="../../assets/images/post5.png">
+            <img *ngIf="index==5" class="postImage" src="../../assets/images/post6.jpeg"> -->
+            <div class="postBlockItems">{{post.title}}</div>
+            <span id="postBody" class="postBlockItems">{{post.body |summary:100}}</span>
+            <div class="botBar">
+                <img class="postLogo" src="../../assets/images/logo.png">
+                <div class="idsBlock">
+                    <span class="ids">Post Id: {{post.id}} </span><br />
+                    <span class="ids">User Id: {{post.userId}}</span>
+                </div>
+            </div>
+
+        </div>
+    </div>

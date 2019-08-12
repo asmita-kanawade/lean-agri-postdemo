@@ -1,0 +1,77 @@
+
+.postBlock{
+    position: relative;
+    width: 300px;     
+    display:table-caption;
+    padding: 10px;
+}
+.postContainer{
+    min-height: 550px;
+    border: 1px solid #eee;
+    margin-top: 20px;
+    box-shadow: 2px 2px 4px gray;
+    
+}
+.postImage{
+    width: 100%;
+    padding: 10px;
+}
+.botBar{
+    position: absolute;
+    bottom: 0px;
+    margin: 10px;
+}
+.postLogo{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 60px;
+    padding: 5px;
+}
+.idsBlock{
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.postBlockItems{
+    width: 100%;
+    padding-left: 10px;
+    margin: 5px;
+    color: black;
+    overflow-wrap: break-word;
+}
+.ids{
+    margin: 20px;
+    margin: 5px;
+}
+#postBody{
+    font-style: italic;
+    text-align: left;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: normal;
+    color: rgba(0,0,0,.54);
+}
+#itm-010,#itm-020,#itm-030{
+    display: block;
+}
+.nav-item{
+ margin: 5px;
+}
+.nav{
+    background-color: rgba(0,0,0,.84);
+}
+.nav-link{
+    border-radius: 30px;
+    border: 1px;
+}
+.search{
+    width: 300px;
+}

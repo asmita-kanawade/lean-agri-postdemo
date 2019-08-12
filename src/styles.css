@@ -1,0 +1,6 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+body{
+    padding: 30px;
+    /*background-image: url('./assets/images/bg4.jpg');*/
+    /* background-size: cover; */
+}

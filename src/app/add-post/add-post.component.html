@@ -1,0 +1,44 @@
+<form #addPostForm="ngForm" autocomplete="off">
+  <div class="form-group">
+    <label class="formLabels" for="title">Title</label>
+
+    <input required minlength="5" ngModel [value]=title type="title" class="form-control" id="title"
+      placeholder="Enter title" name="title" #inputTitle="ngModel" />
+
+    <div *ngIf="inputTitle.touched && !inputTitle.valid">
+      <div *ngIf="inputTitle.errors.required">Title is required.</div>
+      <div *ngIf="inputTitle.errors.minlength">Title should be of minimum 5 characters.</div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label class="formLabels" for="post">Post</label>
+
+    <textarea required minlength="30" ngModel [value]=body type="post" class="form-control editPost" id="post"
+      placeholder="Enter post" name="post" #inputPost="ngModel">
+      </textarea>
+
+    <div class="errorBox" *ngIf="inputPost.touched  && !inputPost.valid">
+      <div *ngIf="inputPost.errors.required">Post is required.</div>
+      <div *ngIf="inputPost.errors.minlength">Post should be of minimum 30 characters.</div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="addPost(inputTitle,inputPost)">
+    Submit
+  </button>
+
+  <button type="submit" class="btn btn-secondary cancelBtn" (click)="navToPost()">
+    Cancel
+  </button>
+</form>
+
+<!-- <div class="postBlock" *ngFor="let post of postArray">
+    <div class="postContainer">
+            <h2>Title: {{post.title}}</h2>
+            <h3>{{post.body}}</h3> 
+            <br />User: {{post.userId}}
+            <br />Post Id: {{post.id}}
+    </div>
+</div> -->
